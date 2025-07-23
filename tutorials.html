@@ -1,0 +1,573 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Crochet Tutorials</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    padding: 10px;
+    font-family: "Segoe UI", sans-serif;
+    color: #3a0b1f;
+    background:
+      radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+      radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+      linear-gradient(135deg, #ff9ac7, #ffd4eb);
+    background-size: 28px 28px, 28px 28px, cover;
+    background-position: 0 0, 14px 14px, 0 0;
+    overflow-x: hidden;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 32px;
+    color: #2c0b1a;
+    text-shadow: 2px 2px 5px rgba(255,255,255,0.8);
+    margin: 10px 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .intro {
+    max-width: 700px;
+    margin: 0 auto 10px;
+    font-size: 15px;
+    line-height: 1.4;
+    background: rgba(255,255,255,0.5);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .accordion {
+    max-width: 800px;
+    margin: 10px auto 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .accordion-item {
+    background: rgba(255,255,255,0.7);
+    margin-bottom: 6px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .accordion-header {
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 17px;
+    font-weight: bold;
+    background: #ffbfd4;
+    color: #2c0b1a;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion-header::after {
+    content: '＋';
+    font-size: 20px;
+    transition: transform 0.25s ease;
+  }
+  .accordion-header.active::after {
+    content: '－';
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    background: rgba(255,255,255,0.35);
+    padding: 0 16px;
+  }
+
+  .accordion-content-inner {
+    padding: 12px 0;
+  }
+
+  .accordion-content ol {
+    margin: 0 0 8px;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-left: 20px;
+  }
+
+  .tutorial-video {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 10px auto;
+    aspect-ratio: 16 / 9;
+    background: rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .tutorial-video::before { content: ""; display: block; padding-top: 56.25%; }
+
+  .tutorial-video iframe,
+  .tutorial-video .video-embed {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c0b1a;
+    font-size: 15px;
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+    padding: 0 8px;
+    text-align: center;
+  }
+  .video-placeholder:hover { background: rgba(255,255,255,0.8); }
+
+  .back-top {
+    display: block;
+    width: fit-content;
+    margin: 14px auto 0;
+    font-size: 15px;
+    color: #ff6aa9;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .back-top:hover { text-decoration: underline; }
+
+  #backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    z-index: 999;
+    background-color: #ff6aa9;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+  }
+  #backToTopBtn:hover { background-color: #ff418d; }
+
+  .sticker {
+    position: absolute;
+    color: #2b0f18;
+    font-size: 24px;
+    opacity: 0.7;
+    text-shadow: 0 0 4px rgba(0,0,0,0.4);
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite, twinkle 4s ease-in-out infinite;
+    z-index: 0;
+  }
+  .s1 { top: 20px;  left: 10%; }
+  .s2 { top: 300px; right: 15%; animation-delay: 1s; }
+  .s3 { top: 700px; left:  5%; animation-delay: 2s; }
+  .s4 { top: 1100px; right: 25%; animation-delay: 3s; }
+
+  @keyframes float {0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  @keyframes twinkle {0%,100%{opacity:0.7}50%{opacity:0.9}}
+
+  @media (max-width:600px){
+    h1 {font-size:26px;}
+    .accordion-header {font-size:16px; padding:10px 12px;}
+    .intro {font-size:14px;}
+  }
+</style>
+</head>
+<body id="top">
+
+  <div class="sticker s1">✦</div>
+  <div class="sticker s2">★</div>
+  <div class="sticker s3">✧</div>
+  <div class="sticker s4">✦</div>
+
+  <h1>Crochet Tutorials</h1>
+  <div class="intro">
+    Click a topic to open the step‑by‑step guide. Tap the video area inside to play the tutorial.
+  </div>
+
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">How to Start a Slip Knot</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Make a loop with the yarn tail crossing the working yarn.</li>
+            <li>Insert hook under the working yarn, pull it through the loop.</li>
+            <li>Pull both ends to snug; loop should slide on hook.</li>
+          </ol>
+          <div class="tutorial-video" data-video="wJ08Y0XDV8Q">
+            <div class="video-placeholder">▶ Play Slip Knot Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">How to Crochet a Chain (CH)</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>With slip knot on hook, yarn over (yo).</li>
+            <li>Pull through loop on hook — 1 chain.</li>
+            <li>Repeat; count “V” shapes.</li>
+          </ol>
+          <div class="tutorial-video" data-video="7v-mssy5rKU">
+            <div class="video-placeholder">▶ Play Chain Tutorial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Single Crochet (SC)</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Insert hook in stitch.</li>
+            <li>Yo, pull up loop (2 loops).</li>
+            <li>Yo, pull through both loops.</li>
+          </ol>
+          <div class="tutorial-video" data-video="wgVOkQcf5qw">
+            <div class="video-placeholder">▶ Play Single Crochet Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Half Double Crochet (HDC)</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Yo, insert hook in stitch.</li>
+            <li>Yo, pull up loop (3 loops).</li>
+            <li>Yo, pull through all 3.</li>
+          </ol>
+          <div class="tutorial-video" data-video="f9C1C21MNiM">
+            <div class="video-placeholder">▶ Play HDC Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Double Crochet (DC)</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Yo, insert hook in stitch; yo, pull up loop (3 loops).</li>
+            <li>Yo, pull through 2 (2 loops).</li>
+            <li>Yo, pull through 2 to finish.</li>
+          </ol>
+          <div class="tutorial-video" data-video="5xKssKskNzo">
+            <div class="video-placeholder">▶ Play DC Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Magic Ring (MR) / Magic Circle</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Wrap yarn around fingers to form loop.</li>
+            <li>Insert hook under loop, yo, pull up.</li>
+            <li>Ch to secure; work sts in ring; pull tail to close.</li>
+          </ol>
+          <div class="tutorial-video" data-video="p298HxgsO1s">
+            <div class="video-placeholder">▶ Play Magic Ring Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Crochet Rose (Flower)</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Ch strip; work growing petals across row.</li>
+            <li>Roll strip into spiral bloom.</li>
+            <li>Sew base to secure.</li>
+          </ol>
+          <div class="tutorial-video" data-video="XP0Gouq9jlg">
+            <div class="video-placeholder">▶ Play Rose Tutorial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Crochet Tulip</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Start bulb (rounds) in pink/red.</li>
+            <li>Shape petals; stuff lightly.</li>
+            <li>Add green stem + leaf; sew.</li>
+          </ol>
+          <div class="tutorial-video" data-video="33GQm50lMYQ">
+            <div class="video-placeholder">▶ Play Tulip Tutorial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Crochet Bandana</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Start center of triangle; increase each edge row.</li>
+            <li>Work until head width; add ties.</li>
+            <li>Optional border edging.</li>
+          </ol>
+          <div class="tutorial-video" data-video="7WDlprF7rK8">
+            <div class="video-placeholder">▶ Play Bandana Tutorial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Crochet Rose Pot</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Make rose (or several mini roses).</li>
+            <li>Crochet small pot in rounds (sc).</li>
+            <li>Stuff & attach flowers; secure leaves.</li>
+          </ol>
+          <div class="tutorial-video" data-video="TCWVbwQOQQo">
+            <div class="video-placeholder">▶ Play Rose Pot Tutorial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Crochet Daisy Flower</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Work yellow center circle.</li>
+            <li>Petals: ch + sts around center.</li>
+            <li>Use as applique or attach stem.</li>
+          </ol>
+          <div class="tutorial-video" data-video="DNtq6kfhPiQ">
+            <div class="video-placeholder">▶ Play Daisy Tutorial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXTRA QUICK PROJECTS -->
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Classic Granny Square</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Ch 4 join ring (or MR); ch 3 counts dc.</li>
+            <li>Work 3‑dc clusters + ch‑spaces for corners.</li>
+            <li>Join & add color rounds as desired.</li>
+          </ol>
+          <div class="tutorial-video" data-video="GALGQdP_POw">
+            <div class="video-placeholder">▶ Play Granny Square Tutorial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Heart Appliqué</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Start magic ring / center circle.</li>
+            <li>Petal bumps form top lobes.</li>
+            <li>Shape point; fasten off.</li>
+          </ol>
+          <div class="tutorial-video" data-video="bN_8Ny20XA4">
+            <div class="video-placeholder">▶ Play Heart Appliqué Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Flower Keychain</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Small layered flower motif.</li>
+            <li>Sew to jump ring / key chain.</li>
+            <li>Add leaf or bead if you like.</li>
+          </ol>
+          <div class="tutorial-video" data-video="VZbLAwm2zKM">
+            <div class="video-placeholder">▶ Play Flower Keychain Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Bow / Bowtie Keychain</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Make small rectangle strip.</li>
+            <li>Wrap center to pinch bow shape.</li>
+            <li>Attach to key ring or clip.</li>
+          </ol>
+          <div class="tutorial-video" data-video="GaTBLmiAFq0">
+            <div class="video-placeholder">▶ Play Bow Keychain Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header"><span class="label">Easy Ribbed Beanie (Beginner)</span></div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <ol>
+            <li>Work ribbed rectangle (rows back loop only).</li>
+            <li>Seam short ends to form tube.</li>
+            <li>Gather top; add pom if desired.</li>
+          </ol>
+          <div class="tutorial-video" data-video="ufCgyVbmWkI">
+            <div class="video-placeholder">▶ Play Ribbed Beanie Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button id="backToTopBtn" title="Back to top">↑ Top</button>
+
+<script>
+  const items = document.querySelectorAll('.accordion-item');
+  items.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+
+    header.addEventListener('click', () => {
+      const isActive = header.classList.contains('active');
+
+      if (isActive) {
+        header.classList.remove('active');
+        content.style.maxHeight = 0;
+        stopVideo(content);
+        return;
+      }
+
+      items.forEach(other => {
+        if (other !== item) {
+          const h = other.querySelector('.accordion-header');
+          const c = other.querySelector('.accordion-content');
+          h.classList.remove('active');
+          c.style.maxHeight = 0;
+          stopVideo(c);
+        }
+      });
+
+      header.classList.add('active');
+      content.style.maxHeight = content.scrollHeight + 'px';
+      loadVideo(content);
+    });
+  });
+
+  function loadVideo(contentEl) {
+    const wrap = contentEl.querySelector('.tutorial-video');
+    if (!wrap || wrap.dataset.loaded === 'true') return;
+    const vid = wrap.getAttribute('data-video');
+    if (!vid) return;
+
+    const ph = wrap.querySelector('.video-placeholder');
+    if (ph) ph.remove();
+
+    const iframe = document.createElement('iframe');
+    iframe.className = 'video-embed';
+    iframe.src = 'https://www.youtube.com/embed/' + vid + '?rel=0';
+    iframe.title = 'Crochet Tutorial Video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+
+    wrap.appendChild(iframe);
+    wrap.dataset.loaded = 'true';
+  }
+
+  function stopVideo(contentEl) {
+    const wrap = contentEl.querySelector('.tutorial-video');
+    if (!wrap) return;
+    const iframe = wrap.querySelector('iframe');
+    if (iframe) iframe.remove();
+    if (!wrap.querySelector('.video-placeholder')) {
+      const ph = document.createElement('div');
+      ph.className = 'video-placeholder';
+      ph.textContent = '▶ Play Video';
+      wrap.appendChild(ph);
+    }
+    wrap.dataset.loaded = 'false';
+  }
+
+  document.addEventListener('click', e => {
+    if (e.target.classList.contains('video-placeholder')) {
+      e.stopPropagation();
+      const wrap = e.target.closest('.tutorial-video');
+      const contentEl = wrap.closest('.accordion-content');
+      const header = contentEl.previousElementSibling;
+      if (!header.classList.contains('active')) {
+        header.click(); 
+      } else {
+        loadVideo(contentEl);
+      }
+    }
+  });
+
+  const topBtn = document.getElementById('backToTopBtn');
+  window.addEventListener('scroll', () => {
+    if (document.documentElement.scrollTop > 150 || document.body.scrollTop > 150) {
+      topBtn.style.display = 'block';
+    } else {
+      topBtn.style.display = 'none';
+    }
+  });
+  topBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.querySelectorAll('.back-top').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

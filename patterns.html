@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crochet Patterns</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: "Segoe UI", sans-serif;
+      color: #3a0b1f;
+      overflow-x: hidden;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        linear-gradient(135deg, #ff9ac7, #ffd4eb);
+      background-size: 28px 28px, 28px 28px, 100% 100%;
+      background-position: 0 0, 14px 14px, 0 0;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #2c0b1a;
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.8);
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 auto 20px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.4;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 12px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+
+    .patterns {
+      max-width: 950px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .pattern-card {
+      background: rgba(255,255,255,0.7);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .pattern-card:hover {
+      transform: scale(1.05);
+    }
+
+    .pattern-card img {
+      max-width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 6px;
+    }
+
+    .pattern-card h3 {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #3a0b1f;
+    }
+
+    .pattern-card p {
+      font-size: 12px;
+      color: #4a2c3e;
+      margin-bottom: 4px;
+    }
+
+    /* Floating symbols */
+    .sticker {
+      position: absolute;
+      color: #2b0f18;
+      font-size: 28px;
+      opacity: 0.7;
+      text-shadow: 0 0 6px rgba(0,0,0,0.4);
+      animation: float 6s ease-in-out infinite, twinkle 4s ease-in-out infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .s1  { top: 20px;  left: 10%; animation-delay: 0s; }
+    .s2  { top: 120px; left: 70%; animation-delay: 1s; }
+    .s3  { top: 200px; left: 30%; animation-delay: 2s; }
+    .s4  { top: 350px; left: 50%; animation-delay: 3s; }
+    .s5  { top: 500px; left: 80%; animation-delay: 4s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 0.9; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sticker s1">✦</div>
+  <div class="sticker s2">★</div>
+  <div class="sticker s3">✧</div>
+  <div class="sticker s4">✦</div>
+  <div class="sticker s5">★</div>
+
+  <h1>Crochet Patterns</h1>
+  <div class="intro">
+    Discover a collection of crochet patterns — from scarves to amigurumi — just click a card to see the steps!
+  </div>
+
+  <div class="patterns">
+    <div class="pattern-card" onclick="location.href='pattern-scarf.html'">
+      <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\Scarf.jpg" alt="Scarf Pattern">
+      <h3>Cozy Scarf</h3>
+      <p>Beginner-friendly chunky scarf.</p>
+    </div>
+    <div class="pattern-card" onclick="location.href='pattern-granny.html'">
+      <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\GrannySquare .jpg" alt="Granny Square">
+      <h3>Granny Square</h3>
+      <p>Classic for blankets and tops.</p>
+    </div>
+    <div class="pattern-card" onclick="location.href='pattern-bunny.html'">
+      <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\AmigurumiBunny.jpg" alt="Amigurumi Bunny">
+      <h3>Amigurumi Bunny</h3>
+      <p>Cute plushie for intermediates.</p>
+    </div>
+    <!-- Pwede ka magdagdag pa ng bagong pattern cards dito -->
+  </div>
+</body>
+</html>

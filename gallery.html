@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crochet Gallery</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: "Segoe UI", sans-serif;
+      color: #3a0b1f;
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        linear-gradient(135deg, #ff9ac7, #ffd4eb);
+      background-size: 28px 28px, 28px 28px, 100% 100%;
+      background-position: 0 0, 14px 14px, 0 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      text-align: center;
+      margin: 10px 0 25px;
+      color: #2c0b1a;
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.8);
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 14px;
+      padding: 8px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Stickers */
+    .sticker {
+      position: fixed;
+      color: #2b0f18;
+      font-size: 28px;
+      opacity: 0.5;
+      text-shadow: 0 0 6px rgba(0,0,0,0.4);
+      animation: float 6s ease-in-out infinite, twinkle 4s ease-in-out infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .s1 { top: 20px; left: 5%; }
+    .s2 { top: 80px; right: 5%; }
+    .s3 { bottom: 60px; left: 10%; }
+    .s4 { bottom: 30px; right: 10%; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50%     { transform: translateY(-10px); }
+    }
+    @keyframes twinkle {
+      0%,100% { opacity: 0.5; }
+      50%     { opacity: 0.9; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Stickers -->
+  <div class="sticker s1">✦</div>
+  <div class="sticker s2">★</div>
+  <div class="sticker s3">✧</div>
+  <div class="sticker s4">★</div>
+
+  <h1>🌸 Crochet Gallery</h1>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="Crochet pics/rose.jpg" alt="Crochet Rose">
+      <div class="caption">Crochet Rose</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Crochet pics/tulip.jpg" alt="Crochet Tulip">
+      <div class="caption">Crochet Tulip</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Crochet pics/Bandana.jpg" alt="Crochet Bandana">
+      <div class="caption">Crochet Bandana</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Crochet pics/rose-pot.jpg" alt="Crochet Rose Pot">
+      <div class="caption">Crochet Rose Pot</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Crochet pics/daisy.jpg" alt="Crochet Daisy Flower">
+      <div class="caption">Crochet Daisy Flower</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Crochet pics/Sunflower.jpg" alt="Crochet Sunflower">
+      <div class="caption">Crochet Sunflower</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Crochet pics/bag.jpg" alt="Crochet Bag">
+      <div class="caption">Crochet Bag</div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeBtn');
+
+    galleryItems.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+  </script>
+</body>
+</html>

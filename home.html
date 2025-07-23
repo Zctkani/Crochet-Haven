@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: "Segoe UI", sans-serif;
+      color: #3a0b1f;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body {
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        linear-gradient(135deg, #ff9ac7, #ffd4eb);
+      background-size: 28px 28px, 28px 28px, 100% 100%;
+      background-position: 0 0, 14px 14px, 0 0;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    .sticker {
+      position: absolute;
+      color: #2b0f18;
+      font-size: 30px;
+      opacity: 0.8;
+      pointer-events: none;
+      animation: float 6s ease-in-out infinite, twinkle 4s ease-in-out infinite;
+      z-index: 0;
+      text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    .s1 { top: 20px; left: 20px; animation-delay: 0s; }
+    .s2 { bottom: 30px; right: 30px; animation-delay: 1s; }
+    .s3 { top: 100px; right: 15%; animation-delay: 2s; }
+    .s4 { bottom: 120px; left: 10%; animation-delay: 3s; }
+    .s5 { top: 50%; left: 5%; animation-delay: 4s; }
+    .s6 { bottom: 50px; right: 45%; animation-delay: 5s; }
+    .s7 { top: 200px; left: 70%; animation-delay: 6s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      font-size: 40px;
+      color: #2c0b1a;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(255,255,255,0.9);
+      z-index: 1;
+      position: relative;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      line-height: 1.7;
+      background: rgba(255,255,255,0.6);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      z-index: 1;
+      position: relative;
+    }
+
+    .intro b {
+      color: #a03164;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-size: 22px;
+      margin: 20px 0 15px;
+      font-weight: bold;
+      color: #3a0b1f;
+      z-index: 1;
+      position: relative;
+    }
+
+    .gallery {
+      margin: 0 auto;
+      max-width: 800px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      user-select: none;
+    }
+    .arrow.left { left: 20px; }
+    .arrow.right { right: 20px; }
+    .arrow:hover { color: #ff9ac7; }
+  </style>
+</head>
+<body>
+  <div class="sticker s1">✦</div>
+  <div class="sticker s2">★</div>
+  <div class="sticker s3">✧</div>
+  <div class="sticker s4">✦</div>
+  <div class="sticker s5">★</div>
+  <div class="sticker s6">✧</div>
+  <div class="sticker s7">★</div>
+
+  <h1>Welcome to Crochet Haven</h1>
+  <div class="intro">
+    Crochet is more than just loops and yarn — it's <b>art, passion, and creativity</b>. 
+    Every piece you create tells a unique story, filled with warmth and dedication. 
+    Whether you're just starting your crochet journey or are an experienced artist, 
+    you'll find endless inspiration here — from <b>vibrant bouquets</b> to 
+    <b>adorable keychains</b> and cozy accessories. <br><br>
+    This website is designed to spark your creativity with curated ideas, 
+    colorful patterns, and tips to help you craft something truly magical. 
+    Join a community of makers, share your projects, and let every thread 
+    bring joy and beauty to the world. <b>Start your crochet adventure now!</b>
+  </div>
+
+  <div class="gallery-title">Your Crochet Creations</div>
+  <div class="gallery">
+    <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\FlowerKeychain.jpg" alt="Crochet Flower Keychain">
+    <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\BowtieKeychain.jpg" alt="Crochet Bowtie Keychain">
+    <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\TulipBouquet.jpg" alt="Crochet Tulip Bouquet">
+    <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\roseBouquet.jpg" alt="Crochet Rose Bouquet">
+    <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\sunflowerGirl.jpg" alt="Crochet Sunflower Girl Bouquet">
+    <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\RosePot.jpg" alt="Crochet Rose Pot">
+    <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\BlueTheme.jpg" alt="Crochet Blue Theme Bouquet">
+    <img src="C:\Users\Marc Jonas\Desktop\HTML\Crochet Website\Crochet pics\PinkTheme.jpg" alt="Crochet Pink Theme Bouquet">
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="arrow left" id="prev">&#10094;</span>
+    <img src="" alt="Preview">
+    <span class="arrow right" id="next">&#10095;</span>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const images = Array.from(document.querySelectorAll('.gallery img'));
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      currentIndex = index;
+      lightboxImg.src = images[currentIndex].src;
+      lightbox.style.display = 'flex';
+    }
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        showImage(index);
+      });
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      lightboxImg.src = images[currentIndex].src;
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % images.length;
+      lightboxImg.src = images[currentIndex].src;
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

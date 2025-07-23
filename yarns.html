@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yarns & Tools</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 20px;
+      font-family: "Segoe UI", sans-serif;
+      color: #3a0b1f;
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        linear-gradient(135deg, #ff9ac7, #ffd4eb);
+      background-size: 28px 28px, 28px 28px, 100% 100%;
+      background-position: 0 0, 14px 14px, 0 0;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      text-align: center;
+      color: #2c0b1a;
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.8);
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.5;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      position: relative;
+      z-index: 1;
+    }
+
+    .yarn-tools {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .item-card {
+      background: rgba(255,255,255,0.7);
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .item-card:hover {
+      transform: scale(1.05);
+    }
+    .item-card img {
+      width: 100%;
+      max-height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .item-card h3 {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #3a0b1f;
+    }
+    .item-card p {
+      font-size: 13px;
+      color: #4a2c3e;
+      margin: 0;
+    }
+
+    /* Stickers */
+    .sticker {
+      position: absolute;
+      color: #2b0f18;
+      font-size: 30px;
+      opacity: 0.6;
+      animation: float 6s ease-in-out infinite, twinkle 4s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .s1 { top: 20px; left: 10%; animation-delay: 0s; }
+    .s2 { top: 120px; right: 12%; animation-delay: 1s; }
+    .s3 { top: 300px; left: 25%; animation-delay: 2s; }
+    .s4 { bottom: 150px; right: 20%; animation-delay: 3s; }
+    .s5 { bottom: 50px; left: 15%; animation-delay: 4s; }
+    .s6 { top: 500px; left: 70%; animation-delay: 2.5s; }
+    .s7 { bottom: 400px; right: 10%; animation-delay: 1.5s; }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes twinkle { 0%,100% { opacity: 0.6; } 50% { opacity: 0.9; } }
+  </style>
+</head>
+<body>
+  <!-- Stickers -->
+  <div class="sticker s1">✦</div>
+  <div class="sticker s2">★</div>
+  <div class="sticker s3">✧</div>
+  <div class="sticker s4">✦</div>
+  <div class="sticker s5">★</div>
+  <div class="sticker s6">✧</div>
+  <div class="sticker s7">✦</div>
+
+  <h1>Yarns & Tools</h1>
+  <div class="intro">
+    Explore different types of yarn and essential crochet tools to bring your creations to life.
+  </div>
+
+  <div class="yarn-tools">
+    <div class="item-card">
+      <img src="Crochet pics/YarnColours.jpg" alt="Cotton Yarn">
+      <h3>Cotton Yarn</h3>
+      <p>Soft and durable for everyday projects.</p>
+    </div>
+    <div class="item-card">
+      <img src="Crochet pics/Hook.jpg" alt="Hook Set">
+      <h3>Hook Set</h3>
+      <p>Various sizes for all patterns.</p>
+    </div>
+    <div class="item-card">
+      <img src="Crochet pics/Scissors.jpg" alt="Mini Scissors">
+      <h3>Mini Scissors</h3>
+      <p>Sharp and handy for trimming yarn.</p>
+    </div>
+    <div class="item-card">
+      <img src="Crochet pics/YarnNeedle.jpg" alt="Tapestry Needle">
+      <h3>Tapestry Needle</h3>
+      <p>Perfect for weaving ends.</p>
+    </div>
+    <div class="item-card">
+      <img src="Crochet pics/StitchMarkers.jpg" alt="Stitch Markers">
+      <h3>Stitch Markers</h3>
+      <p>Helps keep track of stitches.</p>
+    </div>
+    <div class="item-card">
+      <img src="Crochet pics/MeasuringTape.jpg" alt="Measuring Tape">
+      <h3>Measuring Tape</h3>
+      <p>Accurate measurements for projects.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cozy Scarf Pattern</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        linear-gradient(135deg, #ff9ac7, #ffd4eb);
+      background-size: 28px 28px, 28px 28px, 100% 100%;
+      background-position: 0 0, 14px 14px, 0 0;
+      color: #2c0b1a;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      margin: 10px 0;
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.8);
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #ff8ec1;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: #ff6fae;
+    }
+
+    .pattern-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.7);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .pattern-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      flex: 1 1 45%;
+    }
+
+    .steps {
+      flex: 1 1 45%;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .steps li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .pattern-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .pattern-container img, .steps {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="max-width:900px; margin: 0 auto;">
+    <a href="patterns.html" class="back-btn">← Back to Patterns</a>
+    <h1>Cozy Scarf Pattern</h1>
+    <div class="pattern-container">
+      <img src="Crochet pics/Scarf.jpg" alt="Cozy Scarf">
+      <ul class="steps">
+        <li><b>Step 1:</b> Chain 30 stitches.</li>
+        <li><b>Step 2:</b> Double crochet across the chain.</li>
+        <li><b>Step 3:</b> Repeat rows until desired length.</li>
+        <li><b>Step 4:</b> Add fringe at both ends.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
