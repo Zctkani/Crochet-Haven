@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Flower Coaster</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 20px;
+      font-family: "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
+        linear-gradient(135deg, #ff9ac7, #ffd4eb);
+      background-size: 28px 28px, 28px 28px, 100% 100%;
+      background-position: 0 0, 14px 14px, 0 0;
+      color: #3a0b1f;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      text-align: center;
+      color: #2c0b1a;
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.8);
+      margin-bottom: 15px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background-color: #ff8ec1;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #ff6aa9;
+    }
+
+    .pattern-container {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      z-index: 1;
+      position: relative;
+    }
+
+    .pattern-container img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .steps {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .steps li {
+      margin-bottom: 8px;
+    }
+
+    .s1 { top: 20px; left: 10%; }
+    .s2 { top: 250px; right: 15%; animation-delay: 2s; }
+    .s3 { bottom: 50px; left: 30%; animation-delay: 3s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.9; }
+    }
+  </style>
+</head>
+<body>
+  <div style="max-width:900px; margin: 0 auto;">
+    <a href="patterns.html" class="back-btn">← Back to Patterns</a>
+    <h1>3D Crochet Flower Coaster</h1>
+    <div class="pattern-container">
+      <img src="Crochet pics/FlowerCoaster.jpg" alt="3D Flower Coaster">
+      <ul class="steps">
+        <li><strong>Round 1:</strong> With center color (white), make a magic ring. Ch 2 (counts as 1 dc), work 11 dc in ring. Join. (12 dc)</li>
+        <li><strong>Round 2:</strong> Ch 2, dc in same st, 2 dc in each st around. Join. (24 dc)</li>
+        <li><strong>Round 3:</strong> Change to green. Ch 1, (sc, ch 3, skip 1) around. Join. (12 ch-3 spaces)</li>
+        <li><strong>Round 4:</strong> In each ch-3 space: (sc, hdc, dc, hdc, sc) to form leafy petals.</li>
+        <li><strong>Round 5:</strong> Attach petal color (e.g. red, yellow). From behind each leaf, ch 4, sl st behind next leaf. Repeat around. (12 ch-4 spaces)</li>
+        <li><strong>Round 6:</strong> In each ch-4 space: (2 dc cluster, ch 1, 2 dc cluster), sl st to next space. This forms puffy petals. (12 3D petals)</li>
+        <li><strong>Optional Round 7:</strong> Repeat previous step with another layer of chains behind current petals for a fuller flower.</li>
+        <li><strong>Finish:</strong> Fasten off and weave in ends. Block if needed.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
