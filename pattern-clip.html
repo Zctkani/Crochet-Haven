@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +6,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-    body {
+    html, body {
       margin: 0;
       padding: 20px;
       font-family: "Segoe UI", sans-serif;
@@ -24,12 +24,13 @@
 
     h1 {
       font-family: 'Pacifico', cursive;
+      font-size: 32px;
       text-align: center;
       color: #2c0b1a;
-      font-size: 32px;
-      text-shadow: 1px 1px 4px rgba(255,255,255,0.8);
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.8);
+      margin-bottom: 15px;
     }
-    
+
     .back-btn {
       display: inline-block;
       background-color: #ff8ec1;
@@ -47,44 +48,43 @@
     }
 
     .pattern-container {
-      max-width: 900px;
+      max-width: 750px;
       margin: 0 auto;
-      background: rgba(255,255,255,0.75);
+      background: rgba(255, 255, 255, 0.6);
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      z-index: 1;
+      position: relative;
     }
 
     .pattern-container img {
       width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      flex: 1 1 45%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
     }
 
     .steps {
-      flex: 1 1 45%;
       font-size: 16px;
-      line-height: 1.6;
+      margin-top: 10px;
     }
 
     .steps li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    @media (max-width: 768px) {
-      .pattern-container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .pattern-container img, .steps {
-        flex: 1 1 100%;
-      }
+    .s1 { top: 20px; left: 10%; }
+    .s2 { top: 250px; right: 15%; animation-delay: 2s; }
+    .s3 { bottom: 50px; left: 30%; animation-delay: 3s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.9; }
     }
   </style>
 </head>
