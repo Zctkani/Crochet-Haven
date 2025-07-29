@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,9 +7,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
     body {
+      font-family: "Segoe UI", sans-serif;
       margin: 0;
       padding: 20px;
-      font-family: "Segoe UI", sans-serif;
       background:
         radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
         radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px),
@@ -30,39 +30,6 @@
       text-shadow: 1px 1px 4px rgba(255,255,255,0.7);
     }
 
-    .container {
-      max-width: 750px;
-      margin: 0 auto;
-      background: rgba(255,255,255,0.7);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-
-    .pattern-section {
-      margin-bottom: 25px;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #631d39;
-    }
-
-    ul {
-      padding-left: 20px;
-      line-height: 1.6;
-    }
-
-    img {
-      display: block;
-      margin: 20px auto;
-      max-width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-
     .back-btn {
       display: inline-block;
       background-color: #ff8ec1;
@@ -78,14 +45,55 @@
     .back-btn:hover {
       background-color: #ff6aa9;
     }
+
+    .pattern-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.7);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .pattern-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      flex: 1 1 45%;
+    }
+
+    .steps {
+      flex: 1 1 45%;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .steps li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .pattern-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .pattern-container img, .steps {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div style="max-width:900px; margin: 0 auto;">
     <a href="patterns.html" class="back-btn">← Back to Patterns</a>
     <h1>Sunflower Pot Pattern</h1>
-    <div class="pattern">
+    <div class="pattern-container">
       <img src="Crochet pics/SunflowerPot.jpg" alt="Crochet Sunflower Pot">
+      <div class="steps">
       <ul>
         <li><b>Step 1:</b> Create the sunflower center with brown yarn: Magic ring, 6 SC. Increase to 18 SC. Make 2 and stuff.</li>
         <li><b>Step 2:</b> Petals with yellow yarn: (CH 5, SC, HDC, DC, HDC, SC) in each stitch around the circle.</li>
@@ -94,6 +102,7 @@
         <li><b>Step 5:</b> Stuff lightly and insert sunflower stem into the pot. Sew to secure.</li>
         <li><b>Optional:</b> Add cute leaves: CH 6, SC to DC then back, sew near the stem or pot rim.</li>
       </ul>
+      </div>
     </div>
   </div>
 </body>
