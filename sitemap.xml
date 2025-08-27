@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://username.github.io/</loc>
+    <loc>https://zctkani.github.io/Crochet-Haven/</loc>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://zctkani.github.io/Crochet-Haven/</loc>
+    <loc>https://zctkani.github.io/Crochet-Haven/index.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/home.html</loc>
     <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/contact.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/gallery.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/left.html</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/abbrev.html</loc>
+    <priority>0.60</priority>
+  </url>
+    <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/patterns.html</loc>
+    <priority>0.60</priority>
+  </url>
+    <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/stitches.html</loc>
+    <priority>0.60</priority>
+  </url>
+    <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/top.html</loc>
+    <priority>0.60</priority>
+  </url>
+    <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/tutorials.html</loc>
+    <priority>0.60</priority>
+  </url>
+    <url>
+    <loc>https://zctkani.github.io/Crochet-Haven/yarns.html</loc>
+    <priority>0.60</priority>
+  </url>
+
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-bookmark.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-bouquet.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-bunny.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-catkeychain.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-cherry.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-clip.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-flower.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-granny.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-heart.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-lavender.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-ribbon.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-scarf.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-squidgame.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-star.html</loc></url>
+  <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-sunflowerpot.html</loc></url>
+
 </urlset>
