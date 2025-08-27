@@ -134,26 +134,6 @@
     margin-bottom: 8px;
   }
 
-  #backToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    background-color: #ff6aa9;
-    color: #fff;
-    padding: 10px 16px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    transition: background 0.3s ease;
-  }
-  #backToTopBtn:hover {
-    background-color: #ff418d;
-  }
-
   .sticker {
     position: absolute;
     color: #2b0f18;
@@ -314,18 +294,7 @@
     </ul>
   </div>
 
-  <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
-
-  <script>
-    const btn = document.getElementById("backToTopBtn");
-    window.onscroll = function() {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    };
-  </script>
 </body>
 </html>
+
 
