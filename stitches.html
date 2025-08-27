@@ -134,18 +134,6 @@
     margin-bottom: 8px;
   }
 
-  .back-top {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 14px;
-    text-decoration: none;
-    color: #ff6aa9;
-    font-weight: 600;
-  }
-  .back-top:hover {
-    text-decoration: underline;
-  }
-
   #backToTopBtn {
     display: none;
     position: fixed;
@@ -198,7 +186,6 @@
 </style>
 </head>
 <body id="top">
-  <!-- Stickers -->
   <div class="sticker s1">✦</div>
   <div class="sticker s2">★</div>
   <div class="sticker s3">✧</div>
@@ -261,7 +248,6 @@
       <li>Yarn over (yo) and pull through loop on hook.</li>
       <li>Repeat for desired number of chains.</li>
     </ul>
-    <a class="back-top" href="#top">↑ Back to top</a>
   </div>
 
   <div id="slst" class="stitch-detail">
@@ -272,7 +258,6 @@
       <li>Yarn over and pull through stitch <em>and</em> loop on hook (one motion).</li>
       <li>No extra yarn over needed.</li>
     </ul>
-    <a class="back-top" href="#top">↑ Back to top</a>
   </div>
 
   <div id="sc" class="stitch-detail">
@@ -283,7 +268,6 @@
       <li>Yarn over, pull up a loop (2 loops on hook).</li>
       <li>Yarn over, pull through both loops.</li>
     </ul>
-    <a class="back-top" href="#top">↑ Back to top</a>
   </div>
 
   <div id="hdc" class="stitch-detail">
@@ -294,7 +278,6 @@
       <li>Yarn over, pull up loop (3 loops on hook).</li>
       <li>Yarn over, pull through all 3 loops.</li>
     </ul>
-    <a class="back-top" href="#top">↑ Back to top</a>
   </div>
 
   <div id="dc" class="stitch-detail">
@@ -306,7 +289,6 @@
       <li>Yarn over, pull through 2 loops (2 left).</li>
       <li>Yarn over, pull through last 2 loops.</li>
     </ul>
-    <a class="back-top" href="#top">↑ Back to top</a>
   </div>
 
   <div id="tr" class="stitch-detail">
@@ -319,7 +301,6 @@
       <li>Yarn over, pull through 2 loops (2 left).</li>
       <li>Yarn over, pull through last 2 loops.</li>
     </ul>
-    <a class="back-top" href="#top">↑ Back to top</a>
   </div>
 
   <div id="mr" class="stitch-detail">
@@ -331,13 +312,11 @@
       <li>Chain 1 (or as pattern says) to secure.</li>
       <li>Work stitches into ring; pull tail to close.</li>
     </ul>
-    <a class="back-top" href="#top">↑ Back to top</a>
   </div>
 
   <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
 
   <script>
-    // Show or hide the back-to-top button
     const btn = document.getElementById("backToTopBtn");
     window.onscroll = function() {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -349,3 +328,4 @@
   </script>
 </body>
 </html>
+
