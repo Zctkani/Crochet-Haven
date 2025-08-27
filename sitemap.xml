@@ -28,15 +28,15 @@
   </url>
   <url>
     <loc>https://zctkani.github.io/Crochet-Haven/abbrev.html</loc>
-    <priority>0.60</priority>
+    <priority>0.80</priority>
   </url>
     <url>
     <loc>https://zctkani.github.io/Crochet-Haven/patterns.html</loc>
-    <priority>0.60</priority>
+    <priority>0.80</priority>
   </url>
     <url>
     <loc>https://zctkani.github.io/Crochet-Haven/stitches.html</loc>
-    <priority>0.60</priority>
+    <priority>0.80</priority>
   </url>
     <url>
     <loc>https://zctkani.github.io/Crochet-Haven/top.html</loc>
@@ -44,11 +44,11 @@
   </url>
     <url>
     <loc>https://zctkani.github.io/Crochet-Haven/tutorials.html</loc>
-    <priority>0.60</priority>
+    <priority>0.80</priority>
   </url>
     <url>
     <loc>https://zctkani.github.io/Crochet-Haven/yarns.html</loc>
-    <priority>0.60</priority>
+    <priority>0.80</priority>
   </url>
 
   <url><loc>https://zctkani.github.io/Crochet-Haven/pattern-bookmark.html</loc></url>
